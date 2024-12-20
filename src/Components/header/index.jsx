@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Logo from '../../assets/Logo.svg'
-import { Link } from "react-router";
+import { HashLink as Link } from 'react-router-hash-link';
 import Button from '../Button';
 
 
@@ -57,10 +57,12 @@ function Header() {
           </div>
           <nav className=" flex flex-col justify-between items-center backdrop-blur-md
           mt-20 w-full ">
-        <Link className='text-customWhite w-full border-[1px] border-gray-400 p-4 '>Pricing</Link>
-        <Link className='text-customWhite w-full border-[1px] border-gray-400 p-4'>Testimonials</Link>
-        <Link className='text-customWhite w-full border-[1px] border-gray-400 p-4'>FAQ</Link>
-        <Link className='text-customWhite w-full border-[1px] border-gray-400 p-4'>Works </Link>
+         <a  className='text-customWhite w-full border-[1px] border-gray-400 p-4'
+          href="#pricing">Pricing</a>
+        <a  className='text-customWhite w-full border-[1px] border-gray-400 p-4' href="#testimonials">Testimonials</a>
+        <a  className='text-customWhite w-full border-[1px] border-gray-400 p-4' href="#faq">FAQ</a>
+        <a  className='text-customWhite w-full border-[1px] border-gray-400 p-4' href="#works">Works</a>
+
       </nav>
 
         </div>
@@ -74,10 +76,10 @@ function Header() {
   <img src={Logo} alt="Logo" className='h-14' />
   <nav className=" flex justify-between items-center ml-[4rem] px-8 py-2 rounded-full border-[1px] border-gray-400
           bg-custombg w-[22rem] ">
-        <Link className='text-customWhite'>Pricing</Link>
-        <Link className='text-customWhite'>Testimonials</Link>
-        <Link className='text-customWhite'>FAQ</Link>
-        <Link className='text-customWhite'>Works </Link>
+        <Link className='text-customWhite' to="#pricing">Pricing</Link>
+        <Link className='text-customWhite' to="#testimonials">Testimonials</Link>
+        <Link className='text-customWhite'to = "#faq">FAQ</Link>
+        <Link className='text-customWhite' to="#works">Works </Link>
       </nav>
       <Button className=" bg-customButton shadow-glow transition-transform transform hover:scale-105" />
   </section>

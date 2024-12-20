@@ -101,12 +101,15 @@ function Home() {
       </section>
       
       <HiringWho />
+      <section id="works">
       <WhyUs />
+      </section>
+   
 
-      <section className='mt-16'>
+      <section className='mt-16'  >
         <MagicCal/>
       </section>
-      <section className=' mt-20'>
+      <section id="pricing" className=' mt-20' >
         <div className=' flex justify-center'>
           <img src={CircleStar} alt="CircleStar" className='mr-2 animate-rotate' />
           <Heading txtsize="text-xl" txt="PRICING" />
@@ -132,7 +135,7 @@ function Home() {
         <TalkExpert />
       </section>
 
-      <section className=' mt-20 flex max-md:flex-col max-md:items-center'>
+      <section className=' mt-20 flex max-md:flex-col max-md:items-center' id="testimonials">
         <People
           ptxt="I’ve worked with a lot of agencies, but none showed this level of care. They were genuinely invested in finding the right person, not just filling a role. The follow-up made it clear they cared about the long-term fit."
           Name="Geetali Dewan"
@@ -163,7 +166,7 @@ function Home() {
         </div>
       </section>
 
-      <section className=' mt-28'>
+      <section className=' mt-28' id="faq">
       <div className=' flex justify-center'>
           <img src={CircleStar} alt="CircleStar" className='mr-2 animate-rotate' />
           <Heading txtsize="text-xl" txt="FAQs" />

@@ -1,3 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
 .tooltip-boat { 
     @apply bg-customButton text-white p-2 ;
     border-top-right-radius: 50%;
@@ -29,7 +36,7 @@
 .dimmed {
     opacity: 0.5; /* Adjust the opacity as needed */
   }
-  
+ 
  
   .highlight-text { transition: color 0.3s ease; } .highlighted { color: white; /* Highlight color */ }
   
