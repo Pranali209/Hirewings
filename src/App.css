@@ -5,6 +5,19 @@ html {
 
 
 
+.slider-container {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: 100%;
+}
+
+.slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+  width: 100%;
+}
+
+
 .tooltip-boat { 
     @apply bg-customButton text-white p-2 ;
     border-top-right-radius: 50%;

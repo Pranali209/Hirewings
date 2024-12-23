@@ -6,18 +6,20 @@ import Doodles2 from '../assets/Doodles2.svg'
 import Doodles3 from '../assets/Doodles3.svg'
 import Doodles4 from '../assets/Doodles4.svg'
 import Button from '../Components/Button'
-import Brands from '../Components/Brands'
+import Brands, { MobileBrands } from '../Components/Brands'
 import HiringWho from '../Components/WhoHiring'
 import WhyUs from '../Components/WhyUs'
 import CircleStar from '../assets/circlestar.svg'
 import Heading from '../Components/Heading'
-import Pricing from '../Components/Pricing'
+import Pricing, { MobilePrice } from '../Components/Pricing'
 import TalkExpert from '../Components/TalkExpert'
-import People from '../Components/People'
+import People, { MobilePeople } from '../Components/People'
 import FAQ from '../Components/FAQ'
 import JoinUs from '../Components/JoinUs'
 import MagicCal from '../Components/MagicCal'
 import FooterBox from '../Components/footer'
+import MobileView from '../Components/MobileView'
+
 function Home() {
   const plans = [
     {
@@ -54,62 +56,67 @@ function Home() {
       <h1 className='bg-clip-text  text-6xl text-center  leading-tight max-md:text-4xl
           text-transparent bg-gradient-to-r from-customWhite to-customGrayText mt-32'>
         Hire Globally, <br /> Start Immediately,<br /> Grow Faster</h1>
-
-      <section className=' flex  justify-around mt-10 max-md:flex-col max-md:items-center '>
-        <Box className=" bg-gradient-to-tl from-custombg  to-black w-[257px] h-[279px]"
-          src={Doodles1}
-          htxt="Tell Us Your Needs"
-          txt="Share your hiring requirements—roles, skills, and team size." />
-        <div className=' flex flex-col  items-center max-md:mt-10'>
-          <span className=' text-customheadertext text-pretty  max-md:text-center'>Tired of High Hiring Costs?
-            What if hiring could be fast, stress-free, and  <br />
-            <span className='mx-4'>affordable? HireWings offers an affordable, fully managed solution </span>
-            <br /> <span className='mx-6'> to hiring, onboarding, and payroll—all while cutting your costs.</span>
-
-
-          </span>
-          <Button className="mt-12 bg-customButton shadow-glow transition-transform transform hover:scale-105" />
-
-        </div>
-
-        <Box className="bg-gradient-to-tl from-black  to-custombg w-[257px] h-[279px] max-md:mt-10"
-          src={Doodles2}
-          htxt="Scale with Confidence"
-          txt="Ongoing management support to help your business thrive" />
-      </section>
-
-      <section className=" flex  justify-center mt-10 max-md:flex-col max-md:items-center">
-
-        <Box className="bg-gradient-to-tl from-black  to-custombg mr-24 max-md:mr-0 w-[257px] h-[279px]"
-          src={Doodles3}
-          htxt="We Find Your Talent"
-          txt="Our experts shortlist the best candidates from our extensive network." />
+      <div className='lg:block max-md:hidden'>
+        <section className=' flex  justify-around mt-10 max-md:flex-col max-md:items-center '>
+          <Box className=" bg-gradient-to-tl from-custombg  to-black w-[257px] h-[279px]"
+            src={Doodles1}
+            htxt="Tell Us Your Needs"
+            txt="Share your hiring requirements—roles, skills, and team size." />
+          <div className=' flex flex-col  items-center max-md:mt-10'>
+            <span className=' text-customheadertext text-pretty  max-md:text-center'>Tired of High Hiring Costs?
+              What if hiring could be fast, stress-free, and  <br />
+              <span className='mx-4'>affordable? HireWings offers an affordable, fully managed solution </span>
+              <br /> <span className='mx-6'> to hiring, onboarding, and payroll—all while cutting your costs.</span>
 
 
-        <Box className="bg-gradient-to-tl from-black  to-custombg w-[257px] h-[279px] max-md:mt-10"
-          src={Doodles4}
-          htxt="Seamless Onboarding"
-          txt="We handle contracts, compliance, and onboarding for a hassle-free start." />
-      </section>
+            </span>
+            <Button className="mt-12 bg-customButton shadow-glow transition-transform transform hover:scale-105" />
+
+          </div>
+
+          <Box className="bg-gradient-to-tl from-black  to-custombg w-[257px] h-[279px] max-md:mt-10"
+            src={Doodles2}
+            htxt="Scale with Confidence"
+            txt="Ongoing management support to help your business thrive" />
+        </section>
+
+        <section className=" flex  justify-center mt-10 max-md:flex-col max-md:items-center">
+
+          <Box className="bg-gradient-to-tl from-black  to-custombg mr-24 max-md:mr-0 w-[257px] h-[279px]"
+            src={Doodles3}
+            htxt="We Find Your Talent"
+            txt="Our experts shortlist the best candidates from our extensive network." />
+
+
+          <Box className="bg-gradient-to-tl from-black  to-custombg w-[257px] h-[279px] max-md:mt-10"
+            src={Doodles4}
+            htxt="Seamless Onboarding"
+            txt="We handle contracts, compliance, and onboarding for a hassle-free start." />
+        </section>
+      </div>
+
+      <MobileView />
+
       <section className='mt-16'>
-      <div className=' flex justify-center'>
+        <div className=' flex justify-center'>
           <img src={CircleStar} alt="CircleStar" className='mr-2 animate-rotate' />
           <Heading txtsize="text-xl" txt="BRANDS" />
 
         </div>
         <Brands />
+        <MobileBrands />
       </section>
-      
+
       <HiringWho />
       <section id="works">
-      <WhyUs />
+        <WhyUs />
       </section>
-   
+
 
       <section className='mt-16'  >
-        <MagicCal/>
+        <MagicCal />
       </section>
-      <section id="pricing" className=' mt-20' >
+      <section id="pricing" className='Desktop mt-20 lg:block max-md:hidden' >
         <div className=' flex justify-center'>
           <img src={CircleStar} alt="CircleStar" className='mr-2 animate-rotate' />
           <Heading txtsize="text-xl" txt="PRICING" />
@@ -130,12 +137,34 @@ function Home() {
           }
         </div>
       </section>
+      <section id="pricing" className='Mobile  mt-20 lg:hidden max-md:block' >
+        <div className=' flex justify-center'>
+          <img src={CircleStar} alt="CircleStar" className='mr-2 animate-rotate' />
+          <Heading txtsize="text-xl" txt="PRICING" />
+
+        </div>
+
+        <h1 className="text-3xl text-gray-300 text-center mt-7">"We don´t charge until we deliver <br /> what we promised"</h1>
+        <div className=' relative overflow-hidden flex transition-transform duration-1000 ease-in-out
+         w-full mt-10 '>
+          {
+            plans.map((plan) => (
+              <MobilePrice
+                id={plan.id}
+                title={plan.title}
+                price={plan.price}
+                features={plan.features}
+              />
+            ))
+          }
+        </div>
+      </section>
 
       <section className=' mt-28  max-md:mt-16 px-14 max-md:px-1'>
         <TalkExpert />
       </section>
 
-      <section className=' mt-20 flex max-md:flex-col max-md:items-center' id="testimonials">
+      <section className='Desktop lg:flex  max-md:hidden mt-20  max-md:flex-col max-md:items-center' id="testimonials">
         <People
           ptxt="I’ve worked with a lot of agencies, but none showed this level of care. They were genuinely invested in finding the right person, not just filling a role. The follow-up made it clear they cared about the long-term fit."
           Name="Geetali Dewan"
@@ -152,36 +181,59 @@ function Home() {
           CoeName="Co-founder, RobX Oy" />
 
       </section>
+
+      <section className='mobile lg:hidden  max-md:flex mt-20 relative overflow-hidden
+       flex transition-transform duration-1000 ease-in-out w-full items-center border-2 border-green-800'
+        id="testimonials">
+
+        <MobilePeople
+          ptxt="I’ve worked with a lot of agencies, but none showed this level of care. They were genuinely invested in finding the right person, not just filling a role. The follow-up made it clear they cared about the long-term fit."
+          Name="Geetali Dewan"
+          CoeName=" CEO Starklass Oy" />
+
+        <MobilePeople
+          ptxt="With this team, hiring was simple and fast. They kept us informed every step, and we ended up with a fantastic new customer success lead who’s already making a difference. I never felt alone in the process."
+          Name="Johannes"
+          CoeName=" CEO, VReal" />
+
+        <MobilePeople
+          ptxt="Hiring great people can get expensive, but with them, we found the perfect balance—amazing talent without the hefty price tag. They truly made quality hiring affordable."
+          Name="Dmitry"
+          CoeName="Co-founder, RobX Oy" />
+
+
+
+      </section>
       <section>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-          <div className="text-white text-5xl  text-center">40+ 
+          <div className="text-white text-5xl  text-center">40+
             <p className='text-sm  text-customgray mt-2'>Happy Partners</p>
           </div>
           <div className="text-white text-5xl  text-center">130+
-          <p className='text-sm  text-customgray mt-2'>Hires ,  Zero Hassale</p>
+            <p className='text-sm  text-customgray mt-2'>Hires ,  Zero Hassale</p>
           </div>
           <div className="text-white text-5xl  text-center">320K+
-          <p className='text-sm  text-customgray mt-2'>Euros Saved</p>
+            <p className='text-sm  text-customgray mt-2'>Euros Saved</p>
           </div>
         </div>
       </section>
 
       <section className=' mt-28' id="faq">
-      <div className=' flex justify-center'>
+        <div className=' flex justify-center'>
           <img src={CircleStar} alt="CircleStar" className='mr-2 animate-rotate' />
           <Heading txtsize="text-xl" txt="FAQs" />
         </div>
         <h1 className="text-3xl text-gray-300 text-center mt-3"> We’ve got the answers</h1>
-        <FAQ/>
+        <FAQ />
       </section>
-      
-     
-  
+
+
+
       <section className='mt-10'>
-         <JoinUs/>
+        <JoinUs />
       </section>
       <section className='mt-10'>
-        <FooterBox/>
+        <FooterBox />
       </section>
     </div>
   )

@@ -37,11 +37,11 @@ function TalkExpert() {
 
 
         </div>
-        <div className=' flex justify-between  mt-5 max-md:flex-col'>
+        <div className=' flex justify-between  mt-5 '>
           <TalkBox txt="No commitment" />
           <TalkBox txt="Unlimited Reveiw" />
         </div>
-        <div className=' flex justify-evenly mt-5 max-md:flex-col max-md:mt-0 '>
+        <div className=' flex justify-evenly mt-5 max-md:mt-0 '>
           <TalkBox txt="No-Code Development" />
           <TalkBox txt="No-Code Development" />
 
@@ -73,9 +73,9 @@ function TalkBox({ txt }) {
 
   return (
 
-    <div className=' bg-custombox rounded-2xl flex w-fit p-3 max-md:w-full max-md:m-2 '>
+    <div className=' bg-custombox rounded-2xl flex w-fit  p-2 max-md:w-1/2 max-md:m-1  '>
       <img src={circlestar} alt="circlestar" className='' />
-      <p className=' text-gray-400 ml-2'>{txt}</p>
+      <p className=' text-gray-400 ml-2 text-sm'>{txt}</p>
     </div>
 
   )

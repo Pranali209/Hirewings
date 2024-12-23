@@ -27,7 +27,7 @@ function Header() {
   const toggleMenu = () => { setIsOpen((prev) => !prev); };
   return (
     <header id="header" className='p-2 px-4 flex justify-around 
-     max-md:flex-col  fixed left-0 w-full  '>
+     max-md:flex-col  fixed left-0 w-full  z-50  '>
       
       <section className='Mobile-Menu flex  justify-between  lg:hidden'>
       <img src={Logo} alt="Logo" className='h-16' />
