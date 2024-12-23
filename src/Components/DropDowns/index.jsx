@@ -2,9 +2,10 @@ import React from 'react'
 
 function DropDowns({heading ,data , category , handleCategoryChange,getOptionLabel}) {
   return (
-    <div className='flex  flex-col Category-div'>
-                <label htmlFor="Course" className="block text-lg mr-2 mb-1 max-md:mt-4  text-customWhite">{heading}</label>
-                <div className='relative'>
+    <div className=' flex mt-10 w-1/2 max-md:w-full Category-div items-center 
+    max-md:mt-2 max-md:flex-col max-md:items-start '>
+                <label htmlFor="Course" className="block text-lg ml-2 mr-2 mb-1 max-md:mt-4  text-customWhite">{heading}</label>
+                <div className='relative  w-full'>
                   <select className='p-2 pr-14 pl-3 rounded-full bg-gray-50 appearance-none
       transition-transform duration-150 hover:border-blue-600 active:scale-95
       peer-checked:border-black flex  w-full 

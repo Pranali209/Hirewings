@@ -24,7 +24,7 @@ function People({ ptxt , Name , CoeName}) {
     )
 }
 
- export function MobilePeople({ ptxt , Name , CoeName}) {
+ export function MobilePeople({key, ptxt , Name , CoeName}) {
     const [currentIndex, setCurrentIndex] = useState(0);
       useEffect(() => {
         const interval = setInterval(() => {
@@ -34,7 +34,9 @@ function People({ ptxt , Name , CoeName}) {
       }, [])
 
     return (
-        <div className='lg:hidden max-md:block slide slider-container'
+        <div className='lg:hidden max-md:block slide  
+
+        slider-container bg-gradient-to-tl from-custombg  to-black'
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
             <div className=" gap-10 ">
                 <div className="  text-center  p-2 
@@ -53,6 +55,7 @@ function People({ ptxt , Name , CoeName}) {
                     <p className="text-sm text-gray-400 mt-2">{Name}<br />{CoeName}</p>
                 </div>
             </div>
+           
         </div>
     )
 }

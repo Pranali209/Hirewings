@@ -72,9 +72,8 @@ function MagicCal() {
   const [visibleYourCost, setVisibleYourCost] = useState(false)
   const [anuallyValue, setAnuallly] = useState(false)
   const [savings, setsavings] = useState(0)
-
-
-
+  let BSalary = 0;
+  let ASalary = 0 ;
   useEffect(() => {
     // updating the roles 
 
@@ -83,8 +82,8 @@ function MagicCal() {
     console.log("aslary", alternateSalary[role][experienceLevels.indexOf(experience)]);
 
 
-    const BSalary = salaries[role][experienceLevels.indexOf(experience)];
-    const ASalary = alternateSalary[role][experienceLevels.indexOf(experience)]
+     BSalary = salaries[role][experienceLevels.indexOf(experience)];
+     ASalary = alternateSalary[role][experienceLevels.indexOf(experience)]
 
     if (value === 0) {
       setVisibleCostwithUs(0);
@@ -166,14 +165,14 @@ function MagicCal() {
               Role Type:</p>
             <div className=' mt-2 max-md:flex-col max-md:items-center'>
             <div className="flex gap-2 justify-between bg-customWhite rounded-full w-fit max-md:w-full max-md:mb-0
-            max-md:items-center
+            max-md:items-center 
             mb-2 Experience-div" >
               {
                 experienceLevels.map((exp) => {
                   return (
                     <div>
                       <input
-                        class="peer sr-only"
+                        className="peer sr-only"
                         value={exp}
                         name="Course"
                         id={exp}
@@ -185,7 +184,7 @@ function MagicCal() {
                         class="flex  cursor-pointer flex-col items-center justify-center px-5 
                  rounded-full  bg-gray-50 p-2 max-md:p-[7px]
                   transition-transform duration-150 hover:border-blue-600 active:scale-95
-                    peer-checked:border-black 
+                    peer-checked:font-semibold
                       peer-checked:bg-customButton "
                       >
                         <label
@@ -204,7 +203,8 @@ function MagicCal() {
               }
 
             </div>
-           <DropDowns
+            <div className='flex  max-md:flex-col '>
+            <DropDowns
            heading = "Category"
            data = {Object.keys(rolesData)}
            category={category}
@@ -218,6 +218,8 @@ function MagicCal() {
            handleCategoryChange = {handleRoleChange}
            getOptionLabel={(role)=>role}
            />
+            </div>
+          
 
 
         
@@ -238,7 +240,7 @@ function MagicCal() {
                   id="Monthly"
                   type="radio"
                   defaultChecked
-
+                  
                 />
                 <div
                   className="flex  cursor-pointer rounded-full px-[2.88rem] p-2 max-md:px-3
@@ -247,7 +249,8 @@ function MagicCal() {
                   
                     bg-gray-50 
                    transition-transform duration-150 hover:border-blue-600 active:scale-95
-                    peer-checked:border-black 
+                    peer-unchecked:font-light
+                     peer-checked:font-semibold
                       peer-checked:bg-customButton"
                 >
                   <label
@@ -272,6 +275,7 @@ function MagicCal() {
                  rounded-full  bg-gray-50 p-2
                   transition-transform duration-150 hover:border-blue-600 active:scale-95
                     peer-checked:border-black 
+                     peer-checked:font-semibold
                       peer-checked:bg-customButton "
                   onClick={() => setAnuallly(!anuallyValue)}
                 >
@@ -298,11 +302,12 @@ function MagicCal() {
                 visibleYourCost ? (
                   <p className="text-customGrayText text-xs">
                     <ul>
-                      - <b>Benchmark Salary:</b> The average gross salary for the role in Finland (default: €4,000/month, customizable).<br />
-                      - <b>Mandatory Employer Costs </b> (18%):Includes:
-                      <li>- Pension Contributions (TyEL): ~16% of gross salary.</li>
-                      <li>- Health Insurance Contribution: ~1.5% of gross salary.</li>
-                      <li>- Unemployment Insurance Contribution: ~0.5% of gross salary.</li>
+                      <li> <b>Number of Employees -</b>{value}</li>
+                      <li> <b>Salary selected -</b>{salaries[role][experienceLevels.indexOf(experience)]}</li>
+                      <li> *1.18</li>
+                       
+                       
+                       
                     </ul>
                   </p>
                 ) : (
@@ -326,8 +331,9 @@ function MagicCal() {
               {
                 visibleCostwithUs ? (
                   <p className="text-customGrayText text-xs">
-                    <b>Alternative Salary:</b>  The average monthly salary for the same role in the alternative market (customizable, e.g., €2,000/month by default).<br />
-                    <b>Service Fee (99€/employee): </b> Fixed cost per employee for additional services provided by the company.
+                    <b>Number of Employees -</b>{value} <br/>
+                    <b>Alternative Salary:</b> {alternateSalary[role][experienceLevels.indexOf(experience)] }<br />
+                    <b>Service Fee  : </b> + 99€
                   </p>
                 ) : (
                   <>

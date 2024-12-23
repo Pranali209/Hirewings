@@ -1,10 +1,36 @@
-import React from 'react'
+import React , {useState} from 'react'
 import Man1 from '../../assets/Man1.svg'
 import Man2 from '../../assets/Man2.svg'
 import Man3 from '../../assets/Man3.svg'
 import circlestar from '../../assets/circlestar.svg'
 import Button from '../Button'
 function TalkExpert() {
+  const[formData ,setFormData] = useState({})
+
+  function handleSumbit(e) {
+    e.preventDefault()
+    if( e.target[0].value.length != 0 &  e.target[1].value!=0 & e.target[2].value != 0 &
+      e.target[3].value != 0 & e.target[4].value != 0)
+      {
+        setFormData(
+          {
+            fName : e.target[0].value,
+            LName : e.target[1].value,
+            Email : e.target[2].value,
+            Phone : e.target[3].value,
+            Message : e.target[4].value
+          }
+        );
+        alert(" Data is Successfully Submitted");
+      }
+      else{
+        alert("Please fill all the fields")
+      }
+      
+      console.log(formData);
+   
+       
+  }
   return (
     <section className=' flex justify-evenly max-md:flex-col max-md:items-center'>
       <div >
@@ -51,16 +77,18 @@ function TalkExpert() {
       </div>
 
       <div className=' w-1/2 max-md:w-full max-md:mt-5 '>
-        <form class="bg-custombox p-6 rounded-lg shadow-lg">
+        <form class="bg-custombox p-6 rounded-lg shadow-lg " onSubmit={handleSumbit}>
           <div class="mb-4">
-            <input type="text" placeholder="First Name" class="w-full bg-black  p-2 rounded-lg mb-2 focus:outline-none focus:ring-2 focus:ring-[#D6CFFD] text-white" />
-            <input type="text" placeholder="Last Name" class="w-full bg-black p-2 rounded-lg mb-2 focus:outline-none focus:ring-2 focus:ring-[#D6CFFD] text-white" />
-            <input type="text" placeholder="Company Name" class="w-full bg-black p-2 rounded-lg mb-2 focus:outline-none focus:ring-2 focus:ring-[#D6CFFD] text-white" />
-            <input type="email" placeholder="Email" class="w-full bg-black p-2 rounded-lg mb-2 focus:outline-none focus:ring-2 focus:ring-[#D6CFFD] text-white" />
-            <input type="tel" placeholder="Phone Number" class="w-full bg-black p-2 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-[#D6CFFD] text-white" />
-            <textarea placeholder="Briefly explain what you are looking for:" class="w-full bg-black p-2 rounded-lg h-24 focus:outline-none focus:ring-2 focus:ring-[#D6CFFD] text-white"></textarea>
+            <input type="text" placeholder="First Name" className="w-full bg-black  p-2 rounded-lg mb-2 focus:outline-none focus:ring-2 focus:ring-[#D6CFFD] text-white" />
+            <input type="text" placeholder="Last Name" className="w-full bg-black p-2 rounded-lg mb-2 focus:outline-none focus:ring-2 focus:ring-[#D6CFFD] text-white" />
+            <input type="text" placeholder="Company Name" className="w-full bg-black p-2 rounded-lg mb-2 focus:outline-none focus:ring-2 focus:ring-[#D6CFFD] text-white" />
+            <input type="email" placeholder="Email" className="w-full bg-black p-2 rounded-lg mb-2 focus:outline-none focus:ring-2 focus:ring-[#D6CFFD] text-white" />
+            <input type="number" placeholder="Phone Number" className="w-full bg-black p-2 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-[#D6CFFD] text-white" />
+            <textarea placeholder="Briefly explain what you are looking for:" 
+            className="w-full bg-black p-2 rounded-lg h-24 focus:outline-none focus:ring-2 focus:ring-[#D6CFFD] text-white"></textarea>
           </div>
-          <Button className="mt-12 bg-customButton shadow-glow transition-transform transform hover:scale-105" />
+          <button 
+           className="mt-12 p-3 rounded-full flex items-center px-5 bg-customButton shadow-glow transition-transform transform hover:scale-105" >Book a Call</button>
         </form>
       </div>
     </section>

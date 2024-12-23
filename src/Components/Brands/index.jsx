@@ -17,7 +17,7 @@ function Brands() {
 
 
     return (
-        <section className='p-5 lg:block max-md:hidden '>
+        <section className='p-5 lg:block max-md:hidden'>
             <h1 className='text-center text-customgray'> Brands we've worked with</h1>
             <div className='flex  justify-evenly mt-12 max-md:flex-col  max-md:flex-wrap max-md:items-center'>
                 {
@@ -44,7 +44,7 @@ export function MobileBrands(params) {
         return () => clearInterval(interval);
     }, []);
     return (
-        <div className="overflow-hidden relative w-full h-64">
+        <div className="overflow-hidden relative w-full h-64 lg:hidden max-md:block">
             <div className="flex transition-transform duration-1000 ease-in-out"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }} >
                 {BrandName.map((src, index) => (
