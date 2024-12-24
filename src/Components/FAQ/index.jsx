@@ -7,23 +7,31 @@ const FAQ = () => {
     },
     {
       question: 'How do you ensure the quality of the talent?',
-      answer: 'We have a rigorous screening process to ensure the quality of our talent. This includes background checks, skills assessments, and interviews.'
-    },
-    {
-      question: 'What makes hiring through your service cost-effective?',
-      answer: 'Our service is cost-effective because we offer a flat fee for our services, with no hidden costs.'
-    },
-    {
-      question: 'Can I scale my team up or down easily?',
-      answer: 'Yes, you can easily scale your team up or down as needed. We have a flexible pricing model that allows you to adjust your plan as your needs change.'
-    },
-    {
-      question: 'Do you offer ongoing support after the hire?',
-      answer: 'Yes, we offer ongoing support after the hire. We are always available to answer your questions and provide assistance.'
+      answer: 'We only bring the best to the table. Every candidate goes through skill tests and interviews so that you get top-tier professionals ready to make an impact'
     },
     {
       question: 'What kind of roles can you help fill?',
-      answer: 'We can help you fill a wide range of roles, from entry-level to executive-level positions.'
+      answer: "From tech experts to customer support heroes, we've got you covered! Software developers, marketing specialists, admin support—you name it, we can find it."
+    },
+    {
+      question: 'What does your onboarding process include?',
+      answer: 'Think of it as a "stress-free start"! We handle contracts, compliance, tools setup, and everything in between, so your new hire can hit the ground running.'
+    },
+    {
+      question: 'Do you offer ongoing support after the hire?',
+      answer: 'You bet! We’re here for the long haul—HR management, payroll, and cultural integration are all part of our continuous support. Your success is our mission.'
+    },
+    {
+      question: 'Can I scale my team up or down easily?',
+      answer: 'Absolutely! Need to grow your team fast or downsize after a project? We make scaling easy so you can adapt without the headaches.'
+    },
+    {
+      question:'How do you handle compliance and legal requirements?',
+      answer: "We've got you covered. All compliance, local regulations, and legal paperwork are managed by us. You get peace of mind without the red tape."
+    },
+    {
+      question:'What makes hiring through your service cost-effective?',
+      answer: 'Big savings! By hiring skilled talent through us, you can cut labor costs by up to 50% while maintaining high quality. More talent, less spend—it’s a win-win'
     }
   ];
 
@@ -52,9 +60,11 @@ const FaqItem = ({ question, answer }) => {
         className="faq-question flex justify-between items-center p-4 cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <p className="text-lg font-medium text-customgray">{question}</p>
+        <p className={`text-lg font-medium text-customgray 
+          ${isOpen ? 'text-white' : 'text-customgray'}`}>{question}</p>
         <span
-          className={`material-symbols-outlined text-xl text-customButton transition-transform duration-300 transform ${isOpen ? 'rotate-90' : ''}`}
+          className={`material-symbols-outlined text-xl
+             text-customButton transition-transform duration-300 transform ${isOpen ? 'rotate-90' : ''}`}
         >
           +
         </span>

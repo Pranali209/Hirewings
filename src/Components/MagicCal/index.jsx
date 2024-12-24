@@ -292,7 +292,7 @@ function MagicCal() {
           </div>
 
           <div className='flex max-md:flex-col'>
-            <div className="bg-[#FDCFD0] w-1/2 m-2 p-2 px-5 h-40 justify-between rounded-2xl  max-md:w-[100%]
+            <div className="bg-[#FDCFD0] w-1/2 m-2 p-2 px-5 max-md:px-2 h-40 max-md:h-24 justify-between rounded-2xl  max-md:w-[100%]
              flex flex-col relative">
 
               <button className=' w-4 h-4 text-center top-2 text-[10px] border-[1px] text-customGrayText
@@ -317,13 +317,14 @@ function MagicCal() {
                         viewBox="0 0 320 512" className=' inline mt-[-6px] ml-1'>
                         <path d="M48.1 240c-.1 2.7-.1 5.3-.1 8l0 16c0 2.7 0 5.3 .1 8L32 272c-17.7 0-32 14.3-32 32s14.3 32 32 32l28.3 0C89.9 419.9 170 480 264 480l24 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-24 0c-57.9 0-108.2-32.4-133.9-80L256 336c17.7 0 32-14.3 32-32s-14.3-32-32-32l-143.8 0c-.1-2.6-.2-5.3-.2-8l0-16c0-2.7 .1-5.4 .2-8L256 240c17.7 0 32-14.3 32-32s-14.3-32-32-32l-125.9 0c25.7-47.6 76-80 133.9-80l24 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-24 0C170 32 89.9 92.1 60.3 176L32 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l16.1 0z" /></svg>
                     </h1>
-                    <p className='text-black text-base'> Your Cost</p>
+                    <p className='text-black text-base max-md:text-sm'> Your Cost</p>
                   </>
                 )
               }
 
             </div>
-            <div className="bg-[#D6CFFD] w-1/2 m-2 max-md:w-full p-5 h-40 justify-between rounded-2xl flex flex-col relative">
+            <div className="bg-[#D6CFFD] w-1/2 m-2 max-md:w-full p-5 h-40  max-md:p-2
+            max-md:h-24 justify-between rounded-2xl flex flex-col relative">
 
               <button className=' w-4 h-4 text-center top-2  text-[10px] border-[1px] text-customGrayText
                border-customGrayText rounded-full absolute right-2 hover:cursor-pointer'
@@ -337,13 +338,13 @@ function MagicCal() {
                   </p>
                 ) : (
                   <>
-                    <h1 className='text-3xl font-bold'>{calculateCostwithUs}
+                    <h1 className='text-3xl  font-bold'>{calculateCostwithUs}
                       <svg xmlns="http://www.w3.org/2000/svg" height="24" width="15" viewBox="0 0 320 512"
                         className=' inline mt-[-6px] ml-1'>
                         <path d="M48.1 240c-.1 2.7-.1 5.3-.1 8l0 16c0 2.7 0 5.3 .1 8L32 272c-17.7 0-32 14.3-32 32s14.3 32 32 32l28.3 0C89.9 419.9 170 480 264 480l24 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-24 0c-57.9 0-108.2-32.4-133.9-80L256 336c17.7 0 32-14.3 32-32s-14.3-32-32-32l-143.8 0c-.1-2.6-.2-5.3-.2-8l0-16c0-2.7 .1-5.4 .2-8L256 240c17.7 0 32-14.3 32-32s-14.3-32-32-32l-125.9 0c25.7-47.6 76-80 133.9-80l24 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-24 0C170 32 89.9 92.1 60.3 176L32 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l16.1 0z" /></svg>
                     </h1>
-                    <p className='text-black text-base'>Cost With Us</p>
-                    <img src={Caluclator} alt="cal" className=' w-20 h-20 absolute top-11 right-2' />
+                    <p className='text-black text-base max-md:text-sm'>Cost With Us</p>
+                    <img src={Caluclator} alt="cal" className=' w-20 h-20 absolute top-11 right-2 max-md:w-14 max-md:h-14' />
                   </>
                 )
               }
@@ -351,15 +352,16 @@ function MagicCal() {
             </div>
 
           </div>
-          <div className="bg-[#DBFFF5]  m-2 p-3 h-36 justify-between rounded-2xl flex flex-col relative  
+          <div className="bg-[#DBFFF5] max-md:p-2 m-2 p-3 h-36 
+          max-md:h-24 justify-between rounded-2xl flex flex-col relative  
           max-md:w-full ">
             <h1 className='text-3xl font-bold'>{savings}
               <svg xmlns="http://www.w3.org/2000/svg" height="24" width="15" viewBox="0 0 320 512"
                 className=' inline mt-[-6px] ml-1'>
                 <path d="M48.1 240c-.1 2.7-.1 5.3-.1 8l0 16c0 2.7 0 5.3 .1 8L32 272c-17.7 0-32 14.3-32 32s14.3 32 32 32l28.3 0C89.9 419.9 170 480 264 480l24 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-24 0c-57.9 0-108.2-32.4-133.9-80L256 336c17.7 0 32-14.3 32-32s-14.3-32-32-32l-143.8 0c-.1-2.6-.2-5.3-.2-8l0-16c0-2.7 .1-5.4 .2-8L256 240c17.7 0 32-14.3 32-32s-14.3-32-32-32l-125.9 0c25.7-47.6 76-80 133.9-80l24 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-24 0C170 32 89.9 92.1 60.3 176L32 176c-17.7 0-32 14.3-32 32s14.3 32 32 32l16.1 0z" /></svg>
             </h1>
-            <p className='text-black text-base'> Saving Monthly</p>
-            <img src={Caluclator} alt="cal" className=' w-20 h-20 absolute right-2' />
+            <p className='text-black text-base max-md:text-sm'> Saving Monthly</p>
+            <img src={Caluclator} alt="cal" className=' w-20 h-20 absolute right-2 max-md:h-14 max-md:w-14' />
           </div>
         </div>
       </div>

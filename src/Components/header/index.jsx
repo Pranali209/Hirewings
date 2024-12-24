@@ -58,10 +58,14 @@ function Header() {
           <nav className=" flex flex-col justify-between items-center backdrop-blur-md
           mt-20 w-full ">
          <a  className='text-customWhite w-full border-[1px] border-gray-400 p-4'
-          href="#pricing">Pricing</a>
-        <a  className='text-customWhite w-full border-[1px] border-gray-400 p-4' href="#testimonials">Testimonials</a>
-        <a  className='text-customWhite w-full border-[1px] border-gray-400 p-4' href="#faq">FAQ</a>
-        <a  className='text-customWhite w-full border-[1px] border-gray-400 p-4' href="#works">Works</a>
+          href="#pricing"
+          onClick={() => setIsOpen(false)}>Pricing</a>
+        <a  className='text-customWhite w-full border-[1px] border-gray-400 p-4' href="#testimonials"
+        onClick={() => setIsOpen(false)}>Testimonials</a>
+        <a  className='text-customWhite w-full border-[1px] border-gray-400 p-4' href="#faq"
+        onClick={() => setIsOpen(false)}>FAQ</a>
+        <a  className='text-customWhite w-full border-[1px] border-gray-400 p-4' href="#works"
+        onClick={() => setIsOpen(false)}>Works</a>
 
       </nav>
 
@@ -72,7 +76,7 @@ function Header() {
 
 
 
-  <section className='hidden lg:flex justify-around  w-full'>
+  <section className='Desktop-menu hidden lg:flex justify-around  w-full'>
   <img src={Logo} alt="Logo" className='h-14' />
   <nav className=" flex justify-between items-center ml-[4rem] px-8 py-2 rounded-full border-[1px] border-gray-400
           bg-custombg w-[22rem] ">

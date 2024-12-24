@@ -123,7 +123,7 @@ function Home() {
       <section className='mt-16'  >
         <MagicCal />
       </section>
-      <section id="pricing" className='Desktop mt-20 lg:block max-md:hidden' >
+      <section  className='Desktop mt-20 lg:block max-md:hidden' >
         <div className=' flex justify-center'>
           <img src={CircleStar} alt="CircleStar" className='mr-2 animate-rotate' />
           <Heading txtsize="text-xl" txt="PRICING" />
@@ -166,8 +166,8 @@ function Home() {
           }
         </div>
       </section>
-      <div className=' flex justify-center items-center  bg-customgray
-          w-5 h-5 rounded-full absolute top-[320.25rem] right-[5px]'>
+      <div className='  justify-center items-center   bg-customgray SlideArrow lg:hidden max-md:flex
+          w-5 h-5 rounded-full absolute top-[310.25rem] right-[5px]'>
         <svg xmlns="http://www.w3.org/2000/svg" height="10" width="8" viewBox="0 0 384 512">
           <path
             d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z" />
@@ -178,7 +178,7 @@ function Home() {
         <TalkExpert />
       </section>
 
-      <section className='Desktop lg:flex  max-md:hidden mt-20  max-md:flex-col max-md:items-center' id="testimonials">
+      <section className='Desktop lg:flex  max-md:hidden mt-20  max-md:flex-col max-md:items-center'>
         <People
           ptxt="I’ve worked with a lot of agencies, but none showed this level of care. They were genuinely invested in finding the right person, not just filling a role. The follow-up made it clear they cared about the long-term fit."
           Name="Geetali Dewan"
@@ -222,7 +222,7 @@ function Home() {
 
       </section>
       <div className=' Sliderarrow justify-center items-center  bg-customgray
-          w-5 h-5 rounded-full absolute bottom-[158.25rem] right-[5px] lg:hidden max-md:flex'>
+          w-5 h-5 rounded-full absolute bottom-[140.25rem] right-[5px] lg:hidden max-md:flex'>
         <svg xmlns="http://www.w3.org/2000/svg" height="10" width="8" viewBox="0 0 384 512">
           <path
             d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z" />
