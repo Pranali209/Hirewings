@@ -44,12 +44,12 @@ export function MobileBrands(params) {
         return () => clearInterval(interval);
     }, []);
     return (
-        <div className="overflow-hidden relative w-full h-64 lg:hidden max-md:block">
-            <div className="flex transition-transform duration-1000 ease-in-out"
+        <div className="overflow-hidden relative w-full h-40 lg:hidden max-md:block   max-md:mt-20 ">
+            <div className="flex transition-transform duration-1000 ease-in-out items-center"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }} >
                 {BrandName.map((src, index) => (
-                    <div key={index} className="flex-none w-full h-64">
-                        <img src={src.src} alt={`Slide ${index}`} className="w-[300px] h-[200px] object-fill" />
+                    <div key={index} className="flex-none w-full h-64 ">
+                        <img src={src.src} alt={`Slide ${index}`} className="h-20" />
                     </div>))}
             </div>
         </div>);
