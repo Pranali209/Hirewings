@@ -15,14 +15,17 @@ function MobileView() {
           src={Doodles1}
           htxt="Tell Us Your Needs"
           txt="Share your hiring requirements—roles, skills, and team size."
-          imageclass="w-[73px] h-[64px]" />
+          imageclass="w-[73px] h-[64px]"
+          Htxtsize= "text-[7px]" 
+          txtsize = "text-[6px]"/>
 
         <div className='flex justify-end w-full mt-[-75px] '>
           <Box className="bg-gradient-to-tl from-black  to-custombg  w-[130px] mt-10"
             src={Doodles2}
             htxt="Scale with Confidence"
             txt="Ongoing management support to help your business thrive"
-          />
+            Htxtsize= "text-[7px]" 
+            txtsize = "text-[6px]"/>
         </div>
 
 
@@ -32,6 +35,8 @@ function MobileView() {
           src={Doodles3}
           htxt="We Find Your Talent"
           txt="Our experts shortlist the best candidates from our extensive network."
+          Htxtsize= "text-[7px]" 
+          txtsize = "text-[6px]"
         />
 
         <div className='flex   justify-end w-full mt-[-75px] '>
@@ -39,6 +44,8 @@ function MobileView() {
             src={Doodles4}
             htxt="Seamless Onboarding"
             txt="We handle contracts, compliance, and onboarding for a hassle-free start."
+            Htxtsize= "text-[7px]" 
+          txtsize = "text-[6px]"
           />
         </div>
 
