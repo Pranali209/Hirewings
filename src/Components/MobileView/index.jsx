@@ -1,6 +1,7 @@
 import React from 'react'
 import Box from '../Box'
 import Button from '../Button'
+import FallingLine from '../../assets/fallingLine.svg'
 import UpDash from '../../assets/Dashedline.svg'
 import DownDashArrow from '../../assets/DownDashArrow.svg'
 import Doodles1 from '../../assets/Doodles1.svg'
@@ -51,7 +52,7 @@ function MobileView() {
             txtsize="text-[8px]"
           />
         </div>
-        <img src={UpDash} className=' absolute right-[5.25rem] top-[39.25rem]' />
+        <img src={FallingLine} className=' absolute right-[6.25rem] top-[42.9rem]' />
       </section>
 
       <div className='  max-md:flex flex-col lg:hidden items-center max-md:mt-10'>
