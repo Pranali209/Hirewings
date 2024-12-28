@@ -19,7 +19,7 @@ function MobileView() {
           imageclass="w-[73px] h-[64px]"
           Htxtsize="text-[9px]"
           txtsize="text-[8px]" />
-        <img src={DashLine} />
+        <img src={UpDash} />
 
         <div className='flex justify-end w-full mt-[-75px] relative '>
           <Box className="bg-gradient-to-tl from-black  to-custombg  w-[130px] mt-4"
