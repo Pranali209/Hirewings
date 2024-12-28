@@ -52,7 +52,7 @@ function MobileView() {
             txtsize="text-[8px]"
           />
         </div>
-        <img src={FallingLine} className=' absolute right-[6.25rem] top-[42.9rem]' />
+        <img src={FallingLine} className=' absolute right-[6.25rem] top-[39.9rem]' />
       </section>
 
       <div className='  max-md:flex flex-col lg:hidden items-center max-md:mt-10'>
