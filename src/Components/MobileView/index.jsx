@@ -51,7 +51,7 @@ function MobileView() {
             txtsize="text-[8px]"
           />
         </div>
-        <img src={UpDash} className=' absolute right-[6.25rem] top-[40.25rem]' />
+        <img src={UpDash} className=' absolute right-[5.25rem] top-[39.25rem]' />
       </section>
 
       <div className='  max-md:flex flex-col lg:hidden items-center max-md:mt-10'>
