@@ -20,22 +20,22 @@ function MobileView() {
           imageclass="w-[73px] h-[64px]"
           Htxtsize="text-[9px]"
           txtsize="text-[8px]" />
-        <img src={UpDash} />
+        
 
-        <div className='flex justify-end w-full mt-[-75px] relative '>
-          <Box className="bg-gradient-to-tl from-black  to-custombg  w-[130px] mt-4"
+        <div className='flex justify-end w-full mt-[-73px] relative '>
+          <Box className="bg-gradient-to-tl from-black  to-custombg  w-[130px]"
             src={Doodles2}
             htxt="Scale with Confidence"
             txt="Ongoing management support to help your business thrive"
             Htxtsize="text-[9px]"
             txtsize="text-[8px]" />
-          <img src={DownDashArrow} className=' absolute  top-[9rem] right-[8rem]' />
+        
         </div>
         
 
 
 
-        <Box className="bg-gradient-to-tl from-black  to-custombg mt-[-30px]  w-[130px] mr-10"
+        <Box className="bg-gradient-to-tl from-black  to-custombg mt-[-65px]  w-[130px] mr-10"
           src={Doodles3}
           htxt="We Find Your Talent"
           txt="Our experts shortlist the best candidates from our extensive network."
@@ -43,7 +43,7 @@ function MobileView() {
           txtsize="text-[8px]"
         />
 
-        <div className='flex   justify-end w-full mt-[-75px] relative '>
+        <div className='flex   justify-end w-full mt-[-65px] relative '>
           <Box className="bg-gradient-to-tl from-black  to-custombg  w-[130px] "
             src={Doodles4}
             htxt="Seamless Onboarding"
@@ -52,7 +52,7 @@ function MobileView() {
             txtsize="text-[8px]"
           />
         </div>
-        <img src={FallingLine} className=' absolute right-[8.25rem] top-[40.5rem]' />
+       
       </section>
 
       <div className='  max-md:flex flex-col lg:hidden items-center max-md:mt-10'>
