@@ -38,7 +38,7 @@ export function MobilePrice({ id, title, price, features }) {
 
 
     <div className=" bg-custombox p-6 rounded-[2rem] shadow-md m-4 max-sm:w-[43%]
-      lg:hidden max-md:flex-col border-2 border-white  custom-pricing-box slider-container"
+      lg:hidden max-md:flex-col   custom-pricing-box slider-container"
       style={{ transform: `translateX(-${currentIndex * 110}%)` }}>
       <div className=" mb-4">
         <button className="bg-black text-white px-4 py-2 rounded-full">One-time Plan</button>
