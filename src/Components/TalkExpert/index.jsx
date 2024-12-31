@@ -1,35 +1,55 @@
-import React , {useState} from 'react'
+import React, { useState } from 'react'
 import Man1 from '../../assets/Man1.svg'
 import Man2 from '../../assets/Man2.svg'
 import Man3 from '../../assets/Man3.svg'
 import circlestar from '../../assets/circlestar.svg'
 import Button from '../Button'
 function TalkExpert() {
-  const[formData ,setFormData] = useState({})
+  const [formData, setFormData] = useState({})
 
-  function handleSumbit(e) {
+  async function handleSumbit(e) {
     e.preventDefault()
-    if( e.target[0].value.length != 0 &  e.target[1].value!=0 & e.target[2].value != 0 &
-      e.target[3].value != 0 & e.target[4].value != 0)
-      {
-        setFormData(
-          {
-            fName : e.target[0].value,
-            LName : e.target[1].value,
-            Email : e.target[2].value,
-            Phone : e.target[3].value,
-            Message : e.target[4].value
-          }
-        );
-        alert(" Data is Successfully Submitted");
-      }
-      else{
-        alert("Please fill all the fields")
-      }
-      
-      console.log(formData);
-   
+    console.log(e);
+    
+    const FName = e.target[0].value;
+    const LName = e.target[1].value;
+    const Company = e.target[2].value;
+    const Email = e.target[3].value;
+    const Phone = e.target[4].value;
+    const Message = e.target[5].value;
+
+     if (FName && LName && Company && Email && Phone && Message) {
+       const data =
+       {
+         FName: FName,
+         LName: LName,
+         Company: Company,
+         Email: Email,
+         Phone: Phone,
+         Message: Message
+       };
+       setFormData(data);
+       console.log(data);
+
+       const response = await fetch('https://script.google.com/macros/s/AKfycbybYG92SocC1-BMkpQalmVRwXBPXCz1JGxNV8sq4F3mjFZNUy7qZdvBm3LOLR1ggNzFNA/exec',
+         {
+           method: 'POST',
+           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+           body: new URLSearchParams(data).toString()
+         }
+       )
+       e.target.reset()
+       alert("Form Submitted Successfully")
        
+     }
+   
+     else {
+       alert("Please fill all the fields")
+     }
+
+     console.log(formData);
+
+
   }
   return (
     <section className=' flex justify-evenly max-md:flex-col max-md:items-center'>
@@ -50,7 +70,7 @@ function TalkExpert() {
             <div className="relative group ml-[-31px]">
               <img src={Man2} alt="man2" className="size-24 transition-all duration-300" />
               <span className="tooltip-boat absolute left-1/2 bottom-full mb-2 w-auto transform -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-y-2 transition-all duration-300">
-              Alice
+                Alice
               </span>
             </div>
             <div className="relative group ml-[-31px]">
@@ -77,18 +97,18 @@ function TalkExpert() {
       </div>
 
       <div className=' w-1/2 max-md:w-full max-md:mt-5 '>
-        <form class="bg-custombox p-6 rounded-lg shadow-lg " onSubmit={handleSumbit}>
-          <div class="mb-4">
+        <form className="bg-custombox p-6 rounded-lg shadow-lg " onSubmit={handleSumbit}>
+          <div className="mb-4">
             <input type="text" placeholder="First Name" className="w-full bg-black  p-2 rounded-lg mb-2 focus:outline-none focus:ring-2 focus:ring-[#D6CFFD] text-white" />
             <input type="text" placeholder="Last Name" className="w-full bg-black p-2 rounded-lg mb-2 focus:outline-none focus:ring-2 focus:ring-[#D6CFFD] text-white" />
             <input type="text" placeholder="Company Name" className="w-full bg-black p-2 rounded-lg mb-2 focus:outline-none focus:ring-2 focus:ring-[#D6CFFD] text-white" />
             <input type="email" placeholder="Email" className="w-full bg-black p-2 rounded-lg mb-2 focus:outline-none focus:ring-2 focus:ring-[#D6CFFD] text-white" />
             <input type="number" placeholder="Phone Number" className="w-full bg-black p-2 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-[#D6CFFD] text-white" />
-            <textarea placeholder="Briefly explain what you are looking for:" 
-            className="w-full bg-black p-2 rounded-lg h-24 focus:outline-none focus:ring-2 focus:ring-[#D6CFFD] text-white"></textarea>
+            <textarea placeholder="Briefly explain what you are looking for:"
+              className="w-full bg-black p-2 rounded-lg h-24 focus:outline-none focus:ring-2 focus:ring-[#D6CFFD] text-white"></textarea>
           </div>
-          <button 
-           className="mt-12 p-3 rounded-full flex items-center px-5 bg-customButton shadow-glow transition-transform transform hover:scale-105" >Book a Call</button>
+          <button
+            className="mt-12 p-3 rounded-full flex items-center px-5 bg-customButton shadow-glow transition-transform transform hover:scale-105" >Book a Call</button>
         </form>
       </div>
     </section>

@@ -29,7 +29,7 @@ function Header() {
     <header id="header" className='p-2 px-4 flex justify-around 
      max-md:flex-col  fixed left-0 w-full  z-50  '>
       
-      <section className='Mobile-Menu flex  justify-between  lg:hidden'>
+      <section className='Mobile-Menu flex   justify-between  lg:hidden'>
       <img src={Logo} alt="Logo" className='h-16' />
       { !isOpen && <button onClick={toggleMenu} className=" visible focus:outline-none">
           <svg className="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -37,9 +37,9 @@ function Header() {
           </svg>
         </button>}
         
-        <div className={isOpen ? "showMenuNav" : "hideMenuNav"}>
+        <div className= {isOpen ? "showMenuNav" : "hideMenuNav"}>
           <div
-            className="absolute top-0 right-0 px-8 py-5"
+            className="absolute top-0 right-0 px-8 py-5  "
             onClick={() => setIsOpen(false)}
           >
             <svg
@@ -55,20 +55,20 @@ function Header() {
               <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
           </div>
-          <nav className=" flex flex-col justify-between items-center backdrop-blur-md
-          mt-20 w-full ">
-         <a  className='text-customWhite w-full border-[1px] border-gray-400 p-4'
+          <nav className=" flex flex-col  backdrop-blur-md
+          mt-20  w-1/3  border-[1px] border-gray-400 rounded-lg">
+         <a  className='text-customWhite w-full   p-4'
           href="#pricing"
           onClick={() => setIsOpen(false)}>Pricing</a>
-        <a  className='text-customWhite w-full border-[1px] border-gray-400 p-4' href="#testimonials"
+        <a  className='text-customWhite w-full  p-4' href="#testimonials"
         onClick={() => setIsOpen(false)}>Testimonials</a>
-        <a  className='text-customWhite w-full border-[1px] border-gray-400 p-4' href="#faq"
+        <a  className='text-customWhite w-full  p-4' href="#faq"
         onClick={() => setIsOpen(false)}>FAQ</a>
-        <a  className='text-customWhite w-full border-[1px] border-gray-400 p-4' href="#works"
+        <a  className='text-customWhite w-full  p-4' href="#works"
         onClick={() => setIsOpen(false)}>Works</a>
 
       </nav>
-
+    
         </div>
 
       </section>
