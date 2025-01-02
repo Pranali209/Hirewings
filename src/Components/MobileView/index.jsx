@@ -13,7 +13,7 @@ function MobileView() {
     <>
 
       <section className=' sm:flex md:hidden lg:hidden  mt-16 flex-wrap  '>
-        <Box className=" bg-gradient-to-tl from-custombg  to-black  max-sm:w-[125px] custom-width "
+        <Box className=" bg-gradient-to-tl from-custombg  to-black   custom-width "
           src={Doodles1}
           htxt="Tell Us Your Needs"
           txt="Share your hiring requirements—roles, skills, and team size."
@@ -22,8 +22,8 @@ function MobileView() {
           txtsize="text-[8px] custom-txt-size" />
         
 
-        <div className='flex justify-end w-full max-md:mt-[-76px] relative custom-top-margin-2 '>
-          <Box className="bg-gradient-to-tl from-black  to-custombg  max-sm:w-[125px] custom-width "
+        <div className='flex justify-end w-full  relative custom-top-margin-2 '>
+          <Box className="bg-gradient-to-tl from-black  to-custombg   custom-width "
             src={Doodles2}
             htxt="Scale with Confidence"
             txt="Ongoing management support to help your business thrive"
@@ -36,24 +36,24 @@ function MobileView() {
 
 
 
-        <Box className="bg-gradient-to-tl from-black  to-custombg  max-md:mt-[-50px] custom-top-margin  
-        max-sm:w-[125px] max-md:mr-10 custom-width"
+        <Box className="bg-gradient-to-tl from-black  to-custombg   custom-top-margin  
+        max-md:mr-10 custom-width"
           src={Doodles3}
           htxt="We Find Your Talent"
           txt="Our experts shortlist the best candidates from our extensive network."
-            imageclass="w-[73px] h-[64px] custom-image-width"
-            Htxtsize="text-[9px] custom-htxt-size"
-            txtsize="text-[8px] custom-txt-size"
+            imageclass=" custom-image-width"
+            Htxtsize=" custom-htxt-size"
+            txtsize=" custom-txt-size"
         />
 
-        <div className='flex   justify-end w-full  max-md:mt-[-76px] relative custom-top-margin-2 '>
-          <Box className="bg-gradient-to-tl from-black  to-custombg  max-sm:w-[125px] custom-width "
+        <div className='flex   justify-end w-full  relative custom-top-margin-2 '>
+          <Box className="bg-gradient-to-tl from-black  to-custombg  custom-width "
             src={Doodles4}
             htxt="Seamless Onboarding"
             txt="We handle contracts, compliance, and onboarding for a hassle-free start."
-            imageclass=" w-[73px] h-[64px] custom-image-width"
-            Htxtsize="text-[9px] custom-htxt-size"
-            txtsize="text-[8px] custom-txt-size"
+            imageclass="  custom-image-width"
+            Htxtsize=" custom-htxt-size"
+            txtsize=" custom-txt-size"
           />
         </div>
        

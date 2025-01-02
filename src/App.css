@@ -98,6 +98,17 @@ html {
             .custom-x-padding { padding-left:1.5rem; padding-right:1.5rem; }
            
            }
+           @media (min-width:320px) and (max-width : 360px)
+           { 
+             .custom-width { width: 128px; }
+              .custom-image-width { width: 73px; height:64px; } 
+              .custom-htxt-size { font-size: 9px; } 
+              .custom-txt-size { font-size: 8px; }
+              .custom-top-margin { margin-top: -50px; }
+              .custom-top-margin-2 { margin-top: -76px; } 
+               .custom-x-padding { padding-left:1.5rem; padding-right:1.5rem; }
+              
+              }
 
 
           
