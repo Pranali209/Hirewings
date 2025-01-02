@@ -59,7 +59,7 @@ function MobileView() {
        
       </section>
 
-      <div className='  max-md:flex flex-col lg:hidden items-center max-md:mt-10'>
+      <div className='  sm:flex md:hidden  max-md:flex flex-col lg:hidden items-center max-md:mt-10'>
         <span className=' text-customheadertext text-pretty  max-md:text-center'>Tired of High Hiring Costs?
           What if hiring could be fast, stress-free, and  <br />
           <span className='mx-4'>affordable? HireWings offers an affordable, fully managed solution </span>

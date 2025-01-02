@@ -44,7 +44,7 @@ export function MobileBrands(params) {
         return () => clearInterval(interval);
     }, []);
     return (
-        <div className="overflow-hidden relative w-full h-40 lg:hidden max-md:block   max-md:mt-20 ">
+        <div className=" sm:flex md:hidden overflow-hidden relative w-full h-40 lg:hidden max-md:block   max-md:mt-20 ">
             <div className="flex transition-transform duration-1000 ease-in-out items-center"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }} >
                 {BrandName.map((src, index) => (

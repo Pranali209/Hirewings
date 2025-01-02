@@ -31,7 +31,7 @@ function Header() {
 
        <section className='Mobile-Menu flex   justify-between  lg:hidden'>
       <img src={Logo} alt="Logo" className='h-16' />
-      { !isOpen && <button onClick={toggleMenu} className=" visible focus:outline-none">
+      { !isOpen && <button onClick={toggleMenu} className=" visible focus:outline-none hover:scale-[0.8] transition-transform transform hover:cursor-pointer">
           <svg className="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -39,7 +39,7 @@ function Header() {
         
         <div className= {isOpen ? "showMenuNav " : "hideMenuNav"}>
           <div
-            className="absolute top-0 right-0 px-8 py-5  "
+            className="absolute top-0 right-0 px-8 py-5 hover:scale-[0.7] transition-transform transform hover:cursor-pointer"
             onClick={() => setIsOpen(false)}
           >
             <svg
@@ -57,17 +57,17 @@ function Header() {
           </div>
           <nav className=" flex flex-col  backdrop-blur-md  rounded-tl-lg rounded-bl-lg
           mt-14  w-1/2  border-[1px] border-gray-400  w3-animate-right ">
-        <a className='text-customWhite hover:text-customButton p-4 ' to="#pricing"
+        <a className='text-customWhite hover:text-customButton p-4 hover:cursor-pointer underline-effect w3-animate-zoom' to="#pricing"
           onClick={() => setIsOpen(false)}>Pricing</a>
-        <a  className='text-customWhite w-full  p-4  hover:text-customButton' href="#testimonial"
+        <a  className='text-customWhite w-full  p-4  hover:text-customButton  underline-effect w3-animate-right' href="#testimonial"
         onClick={() => setIsOpen(false)} >Testimonials</a>
-        <a  className='text-customWhite w-full  p-4 hover:text-customButton' href="#faq"
+        <a  className='text-customWhite w-full  p-4 hover:text-customButton underline-effect w3-animate-zoom' href="#faq"
         onClick={() => setIsOpen(false)}>FAQ</a>
-        <a  className='text-customWhite w-full  p-4 hover:text-customButton' href="#works"
+        <a  className='text-customWhite w-full  p-4 hover:text-customButton  w3-animate-right' href="#works"
         onClick={() => setIsOpen(false)}>Works</a>
 
 
-      </nav>
+      </nav> 
     
         </div>
 
