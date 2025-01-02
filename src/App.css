@@ -87,7 +87,7 @@ html {
 
     
 
-        @media (min-width:370px) and (max-width : 399px)
+        @media (min-width:360px) and (max-width : 399px)
         { 
           .custom-width { width: 150px; }
            .custom-image-width { width: 76px; height:68px; } 
@@ -98,7 +98,7 @@ html {
             .custom-x-padding { padding-left:1.5rem; padding-right:1.5rem; }
            
            }
-           @media (min-width:320px) and (max-width : 360px)
+           @media (min-width:320px) and (max-width : 359px)
            { 
              .custom-width { width: 128px; }
               .custom-image-width { width: 73px; height:64px; } 
@@ -109,6 +109,16 @@ html {
                .custom-x-padding { padding-left:1.5rem; padding-right:1.5rem; }
               
               }
-
+              @media (min-width:431px) and (max-width:786px) 
+              { 
+                .custom-width { width: fit-content; }
+                 .custom-image-width { width:fit-content; height:fit-content; } 
+                 .custom-htxt-size { font-size: auto; } 
+                 .custom-txt-size { font-size: auto; }
+                 .custom-top-margin { margin-top: px; }
+                 .custom-top-margin-2 { margin-top: -111px; }
+                 .custom-x-padding { padding-left:5rem; padding-right:5rem; }
+                 
+                 }
 
           
