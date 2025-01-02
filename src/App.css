@@ -73,7 +73,7 @@ html {
 
   
 
-  @media (min-width:400px) and (max-width: 430px) 
+  @media (min-width:400px) and (max-width: 434px) 
   { 
     .custom-width { width: 160px; }
      .custom-image-width { width: 80px; height: 70px; } 
@@ -109,15 +109,15 @@ html {
                .custom-x-padding { padding-left:1.5rem; padding-right:1.5rem; }
               
               }
-              @media (min-width:431px) and (max-width:786px) 
+              @media (min-width:435px) and (max-width:786px) 
               { 
-                .custom-width { width: fit-content; }
+                .custom-width { width: 180px; }
                  .custom-image-width { width:fit-content; height:fit-content; } 
-                 .custom-htxt-size { font-size: auto; } 
-                 .custom-txt-size { font-size: auto; }
-                 .custom-top-margin { margin-top: px; }
+                 .custom-htxt-size { font-size: 12px; } 
+                 .custom-txt-size { font-size:11px; }
+                 .custom-top-margin { margin-top: -73px; }
                  .custom-top-margin-2 { margin-top: -111px; }
-                 .custom-x-padding { padding-left:5rem; padding-right:5rem; }
+                 .custom-x-padding { padding-left:1.5rem; padding-right:1.5rem; }
                  
                  }
 
