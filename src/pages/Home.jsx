@@ -123,7 +123,7 @@ function Home() {
       <section className='mt-16'  >
         <MagicCal />
       </section>
-      <section  className='Desktop mt-20 lg:block max-md:hidden' >
+      <section   id="Dpricing" className='Desktop mt-20 lg:block max-md:hidden' >
         <div className=' flex justify-center'>
           <img src={CircleStar} alt="CircleStar" className='mr-2 animate-rotate' />
           <Heading txtsize="text-xl" txt="PRICING" />
@@ -172,7 +172,7 @@ function Home() {
         <TalkExpert />
       </section>
 
-      <section className='Desktop lg:flex  max-md:hidden mt-20  max-md:flex-col max-md:items-center'>
+      <section  id="Dtestimonials" className='Desktop lg:flex  max-md:hidden mt-20  max-md:flex-col max-md:items-center'>
         <People
           ptxt="I’ve worked with a lot of agencies, but none showed this level of care. They were genuinely invested in finding the right person, not just filling a role. The follow-up made it clear they cared about the long-term fit."
           Name="Geetali Dewan"
@@ -192,7 +192,7 @@ function Home() {
 
       <section className='mobile lg:hidden  max-md:flex mt-20 relative overflow-hidden
        flex transition-transform duration-1000 ease-in-out w-full items-center '
-        id="testimonials">
+        id="testimonial">
 
         <MobilePeople
           key={1}

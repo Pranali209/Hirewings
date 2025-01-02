@@ -28,8 +28,8 @@ function Header() {
   return (
     <header id="header" className='p-2 px-4 flex justify-around 
      max-md:flex-col  fixed left-0 w-full  z-50  '>
-      
-      <section className='Mobile-Menu flex   justify-between  lg:hidden'>
+
+       <section className='Mobile-Menu flex   justify-between  lg:hidden'>
       <img src={Logo} alt="Logo" className='h-16' />
       { !isOpen && <button onClick={toggleMenu} className=" visible focus:outline-none">
           <svg className="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -37,7 +37,7 @@ function Header() {
           </svg>
         </button>}
         
-        <div className= {isOpen ? "showMenuNav" : "hideMenuNav"}>
+        <div className= {isOpen ? "showMenuNav " : "hideMenuNav"}>
           <div
             className="absolute top-0 right-0 px-8 py-5  "
             onClick={() => setIsOpen(false)}
@@ -55,39 +55,42 @@ function Header() {
               <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
           </div>
-          <nav className=" flex flex-col  backdrop-blur-md
-          mt-20  w-1/3  border-[1px] border-gray-400 rounded-lg">
-         <a  className='text-customWhite w-full   p-4'
-          href="#pricing"
+          <nav className=" flex flex-col  backdrop-blur-md  rounded-tl-lg rounded-bl-lg
+          mt-14  w-1/2  border-[1px] border-gray-400  w3-animate-right ">
+        <a className='text-customWhite hover:text-customButton p-4 ' to="#pricing"
           onClick={() => setIsOpen(false)}>Pricing</a>
-        <a  className='text-customWhite w-full  p-4' href="#testimonials"
-        onClick={() => setIsOpen(false)}>Testimonials</a>
-        <a  className='text-customWhite w-full  p-4' href="#faq"
+        <a  className='text-customWhite w-full  p-4  hover:text-customButton' href="#testimonial"
+        onClick={() => setIsOpen(false)} >Testimonials</a>
+        <a  className='text-customWhite w-full  p-4 hover:text-customButton' href="#faq"
         onClick={() => setIsOpen(false)}>FAQ</a>
-        <a  className='text-customWhite w-full  p-4' href="#works"
+        <a  className='text-customWhite w-full  p-4 hover:text-customButton' href="#works"
         onClick={() => setIsOpen(false)}>Works</a>
+
 
       </nav>
     
         </div>
 
+      </section> 
+
+   
+
+
+
+
+
+      <section className='Desktop-menu hidden lg:flex justify-around  w-full'>
+        <img src={Logo} alt="Logo" className='h-14' />
+        <nav className=" flex justify-between items-center ml-[4rem] px-8 py-2 rounded-full border-[1px] border-gray-400
+          bg-custombg w-[22rem] ">
+          <Link className='text-customWhite hover:text-customButton' to="#Dpricing">Pricing</Link>
+          <Link className='text-customWhite hover:text-customButton' to="#Dtestimonials">Testimonials</Link>
+          <Link className='text-customWhite hover:text-customButton' to="#faq">FAQ</Link>
+          <Link className='text-customWhite hover:text-customButton' to="#works">Works </Link>
+        </nav>
+        <Button className=" bg-customButton shadow-glow transition-transform transform hover:scale-105" />
       </section>
 
-
-
-
-  <section className='Desktop-menu hidden lg:flex justify-around  w-full'>
-  <img src={Logo} alt="Logo" className='h-14' />
-  <nav className=" flex justify-between items-center ml-[4rem] px-8 py-2 rounded-full border-[1px] border-gray-400
-          bg-custombg w-[22rem] ">
-        <Link className='text-customWhite' to="#pricing">Pricing</Link>
-        <Link className='text-customWhite' to="#testimonials">Testimonials</Link>
-        <Link className='text-customWhite'to = "#faq">FAQ</Link>
-        <Link className='text-customWhite' to="#works">Works </Link>
-      </nav>
-      <Button className=" bg-customButton shadow-glow transition-transform transform hover:scale-105" />
-  </section>
-      
 
 
 
