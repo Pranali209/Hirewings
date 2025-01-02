@@ -85,19 +85,9 @@ html {
      
      }
 
-     @media (min-width:400px) and (max-width: 430px) 
-     { 
-       .custom-width { width: 160px; }
-        .custom-image-width { width: 80px; height: 70px; } 
-        .custom-htxt-size { font-size: 11px; } 
-        .custom-txt-size { font-size: 10px; }
-        .custom-top-margin { margin-top: -26px; }
-        .custom-top-margin-2 { margin-top: -111px; } 
-        .custom-x-padding { padding-left:2rem; padding-right:2rem; }
-        .custom-pricing-box { width:300px}
-        }
+    
 
-        @media (min-width:370px) and (max-width : 398px)
+        @media (min-width:370px) and (max-width : 399px)
         { 
           .custom-width { width: 150px; }
            .custom-image-width { width: 76px; height:68px; } 
