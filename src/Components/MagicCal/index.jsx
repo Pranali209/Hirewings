@@ -93,6 +93,8 @@ function MagicCal() {
     else {
 
       if (anuallyValue) {
+        console.log(anuallyValue , " in if block");
+        
         const CostWithUs = parseInt(value * ((ASalary * 12) + 99))
         const YourCost = parseInt(value * ((BSalary * 12) + 1.18))
         setCalculateCostwithUs(CostWithUs);
@@ -101,6 +103,7 @@ function MagicCal() {
         setsavings(TotalSavings)
       }
       else {
+        console.log(anuallyValue , " in else block");
         const CostWithUs = parseInt(value * (ASalary + 99))
         const YourCost = parseInt(value * (BSalary + 1.18))
         setCalculateCostwithUs(CostWithUs);
@@ -240,7 +243,7 @@ function MagicCal() {
                   id="Monthly"
                   type="radio"
                   defaultChecked
-                  
+                  onClick={() => setAnuallly(false)}
                 />
                 <div
                   className="flex  cursor-pointer rounded-full px-[2.88rem] p-2 max-md:px-3
@@ -277,7 +280,7 @@ function MagicCal() {
                     peer-checked:border-black 
                      peer-checked:font-semibold
                       peer-checked:bg-customButton "
-                  onClick={() => setAnuallly(!anuallyValue)}
+                  onClick={() => setAnuallly(true)}
                 >
                   <label
                     class="flex cursor-pointer items-center justify-center  text-black
