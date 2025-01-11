@@ -86,9 +86,10 @@ function MagicCal() {
      ASalary = alternateSalary[role][experienceLevels.indexOf(experience)]
 
     if (value === 0) {
-      setVisibleCostwithUs(0);
-      setVisibleYourCost(0)
-      setsavings(0)
+     
+      setsavings(0);
+      setCalculateCostwithUs(0)
+      setCalculateYourCost(0)
     }
     else {
 
@@ -272,6 +273,7 @@ function MagicCal() {
                   name="Income"
                   id="Anually"
                   type="radio"
+                  onClick={() => setAnuallly(true)}
                 />
                 <div
                   class="flex  cursor-pointer flex-col items-center justify-center px-[2.88rem] max-md:px-3
@@ -280,7 +282,7 @@ function MagicCal() {
                     peer-checked:border-black 
                      peer-checked:font-semibold
                       peer-checked:bg-customButton "
-                  onClick={() => setAnuallly(true)}
+                
                 >
                   <label
                     class="flex cursor-pointer items-center justify-center  text-black
